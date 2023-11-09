@@ -1,5 +1,12 @@
 # Mac (Intel) Installation Overview
 
+___
+
+- [Click here](https://hackmd.io/@jirvingphd/dojo-env-mac-intel) for a web version of these instructions, with a table of contents sidebar.
+- [Click here](https://hackmd.io/@jirvingphd/dojo-env-overview) for the web version of the Installation Overview.
+
+___
+
 <img src="https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1693270368__MacIntelPythonInstallationforDSOverviewv2023.png">
 
 ## Table of Contents
@@ -20,19 +27,16 @@
     - Step 2.3.3 Confirm your environment was installed.
 - Step 2.4) Activate dojo-env and set it as your default environment.
     - Step 2.4.1) Activate dojo-env
-    - Step 2.4.2) (if needed): Troubleshoot Conda Activate Errors
-    - Step 2.4.3) Confirm that your Home folder is your User folder
-    - Step 2.4.4) Add automatic activation of dojo-env 
-    - Step 2.4.5) Confirm dojo-env is the default & "jnb" alias works.
-    - Step 2.4.6) Shut Down Jupyter (properly)
+    - Step 2.4.2) Determine Which Shell your Terminal is Using: bash or zsh?
+    - Step 2.4.3) Add automatic activation of dojo-env 
+    - Step 2.4.4) Confirm dojo-env is the default & "jnb" alias works.
+    - Step 2.4.5) Shut Down Jupyter (properly)
 - Step 2.5) Test the environment.
 
     - Step 2.5.1) Open the environment tester notebook 
     - Step 2.5.2) Change the notebook's kernel to dojo-env
     - Step 2.5.3) Run the environment test notebook from start to finish.
-
 - **Step 3) Jupyter Notebook Preferences**
-
 - **Step 4) Install a Text Editor - VS Code**
 
 ___
@@ -101,7 +105,7 @@ Note: steps for Tools # 1 and 2 are the same for Mac users with an Intel process
 
 
 
-# **Step 1.3) Install a Python Distribution - Anaconda**
+## **Step 1.3) Install a Python Distribution - Anaconda**
 
 - Anaconda is a data-science-focused python distributable that comes with a convenient GUI program for working with our python environments.
 
@@ -293,7 +297,7 @@ ls -a
 
 **If so, you are all set for step 2.3: create the dojo-env environment!**
 
-# Step 2.3 Create the dojo-env environment
+## Step 2.3 Create the dojo-env environment
 
 ### Step 2.3.0) *(Optional, but Recommended)* Speed Up Your Environment Creation By Switching to libmamba
 
@@ -341,7 +345,7 @@ conda env create -f environment-ds_mac_intel.yml
 # To deactivate this environment use:
  conda deactivate 
 # If conda deactivate doesn't work, activate the "base" env
- conda activate bases
+ conda activate base
 ```
 
 ### Step 2.3.3) Confirm your environment was installed
@@ -377,6 +381,8 @@ python -m ipykernel install --user --name dojo-env --display-name "Python (dojo-
 
 - The first line in the code block above will switch to dojo-env environment.
 - The second line will install dojo-env as an option in Jupyter Notebook.
+
+
 
 ## Step 2.4: Setting `dojo-env` as the default environment
 
@@ -461,7 +467,7 @@ echo 'alias lab="jupyter lab"' >> ~/.zshrc
 
     - **If not, follow the instructions on How to Ask for Help from the Installation Overview** 
 
-## 2.4.6) Shut down Jupyter (Properly)
+### 2.4.5) Shut down Jupyter (Properly)
 
 It is very important that you shut down Jupyter Notebook in the correct way. 
 
@@ -505,7 +511,7 @@ It is very important that you shut down Jupyter Notebook in the correct way.
 
 You are all set for the next step: Testing Your New Environment!
 
-# Step 2.5: Testing the Environment
+## Step 2.5: Testing the Environment
 
 To test that your installation and packages are working properly. We are going to run a specific Environment Testing notebook that is also located in the "dojo-env-setup" folder.
 
@@ -669,8 +675,6 @@ We want to run all of the cells in this notebook and confirm it can make it to t
 
 There are several convenient features in Jupyter Notebook that are not enabled by default. We strongly suggest updating your Jupyter Notebook settings according to the instructions below:
 
-___
-
 ### Quick Settings
 
 - Start from the Jupyter files page,
@@ -811,11 +815,9 @@ To ensure that jupyter shuts down the notebooks and kernels after closing them, 
 
 
 
-___
 
 
-
-# Step 4: Install a Code Text Editor
+# Step 4) Install a Code Text Editor
 
 ## Visual Studio Code
 

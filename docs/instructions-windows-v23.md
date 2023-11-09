@@ -1,5 +1,12 @@
 # Windows Installation Instructions
 
+___
+
+- [Click here](https://hackmd.io/@jirvingphd/dojo-env-windows ) for a web version of these instructions, with a table of contents sidebar.
+- [Click here](https://hackmd.io/@jirvingphd/dojo-env-overview) for the web version of the Installation Overview.
+
+___
+
 <img src="https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1693270300__WIndowstoolsPythonInstallationforDSOverviewv2023.png">
 
 ## Table of Contents
@@ -132,6 +139,9 @@ NOTE: Windows 11 comes with Windows Terminal pre-installed. If you are running W
 
 ![img](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1670712004__Screenshot_20221210_050133.png)
 
+
+![img](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1696376250__Gitbashwhatshouldgitdo.png)
+
 ![img](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1670712057__Screenshot_20221210_050138.png)
 
 ![img](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1670712094__Screenshot_20221210_050148.png)
@@ -194,6 +204,12 @@ NOTE: Windows 11 comes with Windows Terminal pre-installed. If you are running W
 
 
 
+Troubleshooting: when GitHub Desktop first opens, you may see a message about git not being installed. 
+
+![png](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1696376238__nogit.png)
+
+- If you see this message, click on the "Install Git" button.
+
 ### Step 1.2.2) Make Windows Terminal the Default Shell in GitHub Desktop
 
 - Once you have logged into the app, open the Options menu.![img](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1670712744__Screenshot_20221210_050900.png)
@@ -220,9 +236,7 @@ NOTE: Windows 11 comes with Windows Terminal pre-installed. If you are running W
 
 ___
 
-
-
-# **Step 1.3) Install a Python Distribution - Anaconda**
+## Step 1.3) Install a Python Distribution - Anaconda
 
 - Anaconda is a data-science-focused python distributable that comes with a convenient GUI program for working with our python environments.
 
@@ -244,11 +258,12 @@ You may need to take another step to get anaconda and Terminal working together.
 
 - Open **a new Terminal window** from your start menu. It MUST be a new window!
 
-- **Type the command `conda` and press enter.**
-- **If you see a list of available conda commands, great!**
-    - **You are all set to move on to Step 2!** Disregard the final section below that says "Adding Conda to GitBash"
-- **If you see a message that says: "bash: conda: command not found"**:
+- **Type the command `conda ` and press enter.**
+- **If you see a message that says something like: "bash: conda: command not found"**:
     - Follow the instructions below under "Adding Conda to GitBash"
+- **If you do *not* get the command not found message:**
+    - **You are all set to move on to Step 2!** Disregard the final section below that says “Adding Conda to GitBash”
+
 
 ### Step 1.3.3) (if needed) Adding Conda to GitBash:
 
@@ -259,6 +274,7 @@ You may need to take another step to get anaconda and Terminal working together.
 - **Open the start menu and search for "Anaconda Prompt"**
 
     - Double-click on Anaconda Prompt to open it.
+    - ***If you cannot find Anaconda Prompt, use Option B below instead.***
 
 - **In the window that appears, enter the following command:** 
 
@@ -319,6 +335,18 @@ Note: the instructions below are adapted from this [Blog Post](https://fmorenovr
 echo ". '${PWD}'/conda.sh" >> ~/.bashrc
 
 ```
+
+___
+
+- You may see an error message in your Terminal that looks like the follow screenshot: 
+
+![png](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1696376225__warningafter133optionb.png)
+
+- **Do not worry!! It has addressed the problem already and is just letting you know.**
+
+___
+
+
 
 - Open a new GitBash window and enter `conda` again.
     - You should no longer get the "bash: conda: command not found" error message!
@@ -541,12 +569,18 @@ conda env create -f environment-ds_windows.yml
 
 - **Once it has been completed you should see a message that says:**
 
-```bash
-# To activate this environment use:
- conda activate dojo-env
-# To deactivate this environment use:
- conda deactivate 
-```
+    ```
+    # To activate this environment use:
+     conda activate dojo-env
+    # To deactivate this environment use:
+     conda deactivate 
+    ```
+
+    
+
+    ![png](https://assets.codingdojo.com/boomyeah2015/codingdojo/curriculum/content/chapter/1696376455__condaactivatemessage.png)
+
+    
 
 ### Step 2.3.3) Confirm your environment was installed
 
@@ -993,8 +1027,6 @@ ___
 
 There are several convenient features in Jupyter Notebook that are not enabled by default. We strongly suggest updating your Jupyter Notebook settings according to the instructions below:
 
-___
-
 ### Quick Settings
 
 - Start from the Jupyter files page,
@@ -1137,7 +1169,7 @@ To ensure that jupyter shuts down the notebooks and kernels after closing them, 
 
 ___
 
-# Step 4: Install a Code Text Editor
+# Step 4) Install a Code Text Editor
 
 ## Visual Studio Code
 
@@ -1187,11 +1219,12 @@ ___
 
 - On the Extension sidebar, there will be several sections (INSTALLED/POPULAR/RECOMMENDED).
     - Right now you should have nothing under the INSTALLED menu.
-    - You should see "Python" listed under POPULAR.
+    - **You should see the "Python" extension listed under POPULAR.**
         - If not, you can enter "Python" in the search box at the top of the sidebar
         - OR you can click on [this link to the extension ](https://marketplace.visualstudio.com/items?itemName=ms-python.python)on the extension marketplace website.
     - Click on the "Install" button for the Python extension.
         ![png](https://raw.githubusercontent.com/coding-dojo-data-science/dojo-env-setup/main/images/2_extension_installation.png)
+- **You must also install the "Jupyter" extension, which you can find with the search bar.**
 - Note: the Python extension will also install several required extensions. When installation is complete, you should see the following under the "INSTALLED" section:
     - Python, Pylance, Jupyter Notebook renderer, Jupyter, and Jupyter Keymap
 
